@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  biulding_id: 
+  floor: 
+  title: MyString
+
+two:
+  biulding_id: 
+  floor: 
+  title: MyString
