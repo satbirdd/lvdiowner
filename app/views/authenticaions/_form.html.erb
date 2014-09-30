@@ -1,0 +1,42 @@
+<%= form_for(@authenticaion) do |f| %>
+  <% if @authenticaion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@authenticaion.errors.count, "error") %> prohibited this authenticaion from being saved:</h2>
+
+      <ul>
+      <% @authenticaion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :building, "楼栋-房号" %><br>
+    <%= f.collection_select :building, Building.all, :id, :title, { :prompt => '楼栋' } %>栋
+
+    <%= f.collection_select :floor, [], :id, :title, { :prompt => '楼层' } %>层
+
+    <%= f.collection_select :room, [], :id, :title, { :prompt => '房号' } %>号
+  </div>
+
+  <div class="field">
+    <%= f.label :qq, "QQ号" %><br>
+    <%= f.text_field :qq %>
+  </div>
+  <div class="field">
+    <%= f.label :desc, "备注" %><br>
+    <%= f.text_area :desc, size: "30x10" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "提交验证申请" %>
+  </div>
+<% end %>
+
+
+<script>
+  $(function (argument) {
+    $('#authenticaion_building').change(function (argument) {
+    })
+  });
+</script>

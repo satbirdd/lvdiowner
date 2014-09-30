@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @authenticaion.room %>
+</p>
+
+<p>
+  <strong>Qq:</strong>
+  <%= @authenticaion.qq %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @authenticaion.desc %>
+</p>
+
+<%= link_to 'Edit', edit_authenticaion_path(@authenticaion) %> |
+<%= link_to 'Back', authenticaions_path %>

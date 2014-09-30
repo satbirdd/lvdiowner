@@ -1,3 +1,3 @@
 class Room < ActiveRecord::Base
-  belongs_to :biulding
+  belongs_to :floor
 end

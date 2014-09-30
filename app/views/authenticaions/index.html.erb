@@ -1,0 +1,29 @@
+<h1>Listing authenticaions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Room</th>
+      <th>Qq</th>
+      <th>Desc</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @authenticaions.each do |authenticaion| %>
+      <tr>
+        <td><%= authenticaion.room %></td>
+        <td><%= authenticaion.qq %></td>
+        <td><%= authenticaion.desc %></td>
+        <td><%= link_to 'Show', authenticaion %></td>
+        <td><%= link_to 'Edit', edit_authenticaion_path(authenticaion) %></td>
+        <td><%= link_to 'Destroy', authenticaion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Authenticaion', new_authenticaion_path %>

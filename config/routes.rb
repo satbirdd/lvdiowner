@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  resources :authenticaions
+
+  get 'home/index'
+
+  root 'authenticaions#new'
+
+  devise_for :users
   resources :rooms
 
   resources :floors
